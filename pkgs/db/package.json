@@ -1,0 +1,14 @@
+{
+  "name": "@dialecta/db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@dialecta/tsconfig": "workspace:*"
+  }
+}

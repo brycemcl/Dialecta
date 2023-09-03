@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:16.10
+    steps:
+      - checkout
+      - run:
+          name: Install project deps
+          command: npm i -g pnpm
+      - run:
+          name: Install deps
+          command: npm install --reporter=append-only
+      - run:
+          name: Run tests & build
+          command: npm run --reporter=append-only --recursive --if-present --aggregate-output "/^test$|^build$/"
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test

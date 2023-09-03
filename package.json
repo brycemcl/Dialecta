@@ -1,0 +1,22 @@
+{
+  "name": "dialecta",
+  "version": "0.0.1",
+  "description": "My experiments with AI",
+  "keywords": [
+    "AI"
+  ],
+  "author": "Bryce McLachlan",
+  "license": "UNLICENSED",
+  "scripts": {
+    "format": "prettier . --write",
+    "test": "prettier . --check"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3",
+    "prettier": "3.0.3"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}

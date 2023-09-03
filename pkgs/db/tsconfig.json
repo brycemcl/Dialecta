@@ -1,0 +1,3 @@
+{
+  "extends": ["@dialecta/tsconfig/node"]
+}
