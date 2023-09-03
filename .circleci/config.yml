@@ -2,8 +2,10 @@ version: 2.1
 
 jobs:
   build-and-test:
+    resource_class: 'arm.large'
+    working_directory: /mnt/ramdisk
     docker:
-      - image: cimg/node:16.10
+      - image: node:20-bookworm-slim
     steps:
       - checkout
       - run:
