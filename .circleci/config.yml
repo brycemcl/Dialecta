@@ -13,10 +13,10 @@ jobs:
           command: npm i -g pnpm
       - run:
           name: Install deps
-          command: npm install --reporter=append-only
+          command: pnpm install --reporter=append-only
       - run:
           name: Run tests & build
-          command: npm run --reporter=append-only --recursive --if-present --aggregate-output "/^test$|^build$/"
+          command: pnpm run --reporter=append-only --recursive --if-present --aggregate-output "/^test$|^build$/"
 
 workflows:
   build-and-test:
