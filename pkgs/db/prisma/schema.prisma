@@ -1,7 +1,7 @@
 datasource db {
   provider   = "postgresql"
   url        = env("DATABASE_URL")
-  extensions = [vector]
+  extensions = [vector, pgcrypto]
 }
 
 generator client {
@@ -9,10 +9,22 @@ generator client {
   previewFeatures = ["postgresqlExtensions"]
 }
 
+model DocumentSource {
+  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  url             String
+  name            String
+  previousVersion String
+  firstSeen       DateTime @default(now())
+  lastSeen        DateTime @default(now())
+  Document        Document @relation(fields: [documentHash], references: [hash])
+  documentHash    String
+}
+
 model Document {
-  id              String            @id @default(cuid())
+  hash            String            @id
   contents        String
   DocumentSegment DocumentSegment[]
+  DocumentSource  DocumentSource[]
 }
 
 model DocumentSegment {

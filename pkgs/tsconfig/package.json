@@ -1,6 +1,9 @@
 {
   "name": "@dialecta/tsconfig",
   "version": "1.0.0",
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2"
   }
