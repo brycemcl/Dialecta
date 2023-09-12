@@ -1,0 +1,17 @@
+{
+  "name": "@dialecta/openai-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@dialecta/tsconfig": "workspace:*",
+    "gpt-tokenizer": "^2.1.1",
+    "openai": "^4.6.0",
+    "rxjs": "^7.8.1"
+  }
+}

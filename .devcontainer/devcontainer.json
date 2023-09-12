@@ -5,7 +5,16 @@
   "build": {
     // Path is relative to the devcontainer.json file.
     "dockerfile": "Dockerfile"
-  }
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"Prisma.prisma",
+			"ms-azuretools.vscode-docker",
+			"esbenp.prettier-vscode"
+		]
+	}
+}
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],

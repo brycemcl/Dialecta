@@ -131,3 +131,4 @@ dist
 
 # pnpm
 .pnpm-store
+pkgs/db/src/generatedTypes.ts
