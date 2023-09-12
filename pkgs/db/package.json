@@ -8,14 +8,17 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "push": "prisma db push --skip-generate",
-    "build": "prisma generate && tsc"
+    "build": "kysely-codegen && tsc"
   },
   "dependencies": {
     "@dialecta/tsconfig": "workspace:*",
-    "prisma-kysely": "1.7.0",
-    "kysely": "^0.26.3"
+    "kysely": "^0.26.3",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1",
+    "kysely-codegen":"^0.10.1"
   },
   "devDependencies": {
+    "@types/pg": "^8.10.2",
     "prisma": "~5.2.0"
   }
 }
